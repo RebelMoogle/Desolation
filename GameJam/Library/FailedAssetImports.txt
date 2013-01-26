@@ -1,1 +1,1 @@
-Assets/Project/Models/Raw Import/ggj.ma
+Assets/Project/Models/Raw Import/corridor.ma

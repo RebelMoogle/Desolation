@@ -1,8 +1,8 @@
 print "Starting maya loading and fbx conversion \n";
 			
-if (`file -q -exists "C:/Users/Student/DOCUME~1/GitHub/DESOLA~1/GameJam/Assets/Project/Models/RAWIMP~1/ggj.ma"`)
+if (`file -q -exists "C:/Users/Student/DOCUME~1/GitHub/DESOLA~1/GameJam/Assets/Project/Models/RAWIMP~1/corridor.ma"`)
 {
-	file -o "C:/Users/Student/DOCUME~1/GitHub/DESOLA~1/GameJam/Assets/Project/Models/RAWIMP~1/ggj.ma";
+	file -o "C:/Users/Student/DOCUME~1/GitHub/DESOLA~1/GameJam/Assets/Project/Models/RAWIMP~1/corridor.ma";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
