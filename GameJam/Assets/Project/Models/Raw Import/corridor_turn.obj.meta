@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: aebe0927b0ab2934da4b1fd39da172a0
+guid: de8ee645833cf264888c8d16b6aa0398
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: walls
-    100004: water
+    100002: dead_end:corridor_open:water
+    100004: polySurface12
     400000: //RootNode
-    400002: walls
-    400004: water
-    2300000: walls
-    2300002: water
-    3300000: walls
-    3300002: water
-    4300000: walls
-    4300002: water
+    400002: dead_end:corridor_open:water
+    400004: polySurface12
+    2300000: dead_end:corridor_open:water
+    2300002: polySurface12
+    3300000: dead_end:corridor_open:water
+    3300002: polySurface12
+    4300000: dead_end:corridor_open:water
+    4300002: polySurface12
     9500000: //RootNode
   materials:
     importMaterials: 1
