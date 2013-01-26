@@ -1,1 +1,1 @@
-Assets/Project/Models/Raw Import/corridor.ma
+Assets/straight tunnel.ma
