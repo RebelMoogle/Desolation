@@ -1,20 +1,25 @@
 fileFormatVersion: 2
-guid: 43ff54150676f864bb90a56afb99ef39
+guid: 493997761afe1084bac332065c954af7
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: corridor_end:water
-    100004: polySurface13
+    100002: corridor_open1:walls
+    100004: corridor_open1:water
+    100006: pPlane4
     400000: //RootNode
-    400002: corridor_end:water
-    400004: polySurface13
-    2300000: corridor_end:water
-    2300002: polySurface13
-    3300000: corridor_end:water
-    3300002: polySurface13
-    4300000: corridor_end:water
-    4300002: polySurface13
+    400002: corridor_open1:walls
+    400004: corridor_open1:water
+    400006: pPlane4
+    2300000: corridor_open1:walls
+    2300002: corridor_open1:water
+    2300004: pPlane4
+    3300000: corridor_open1:walls
+    3300002: corridor_open1:water
+    3300004: pPlane4
+    4300000: corridor_open1:walls
+    4300002: corridor_open1:water
+    4300004: pPlane4
     9500000: //RootNode
   materials:
     importMaterials: 1

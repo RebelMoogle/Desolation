@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: f1cfd713b4ce4a14293b22366bd6127f
+guid: c94d0fedb1933d045810a93da372582a
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: corridor_turn:polySurface12
-    100004: corridor_turn:water
+    100002: polySurface4_polySurface1
     400000: //RootNode
-    400002: corridor_turn:polySurface12
-    400004: corridor_turn:water
-    2300000: corridor_turn:polySurface12
-    2300002: corridor_turn:water
-    3300000: corridor_turn:polySurface12
-    3300002: corridor_turn:water
-    4300000: corridor_turn:polySurface12
-    4300002: corridor_turn:water
+    400002: polySurface4_polySurface1
+    2300000: polySurface4_polySurface1
+    3300000: polySurface4_polySurface1
+    4300000: polySurface4_polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1

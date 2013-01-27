@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: bf50d56f5663164449ad9f8b0664dd4e
+guid: ce93e123be20741409593466042361ac
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: corridor_T_intersection:polySurface12
-    100004: dead_end:corridor_open:water
+    100002: polySurface8
     400000: //RootNode
-    400002: corridor_T_intersection:polySurface12
-    400004: dead_end:corridor_open:water
-    2300000: corridor_T_intersection:polySurface12
-    2300002: dead_end:corridor_open:water
-    3300000: corridor_T_intersection:polySurface12
-    3300002: dead_end:corridor_open:water
-    4300000: corridor_T_intersection:polySurface12
-    4300002: dead_end:corridor_open:water
+    400002: polySurface8
+    2300000: polySurface8
+    3300000: polySurface8
+    4300000: polySurface8
     9500000: //RootNode
   materials:
     importMaterials: 1
