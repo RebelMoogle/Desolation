@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Monster : MonoBehaviour {
 
+	public AudioSource monsterStep;
 	public float movementSpeed = 0.1f;
 	GameObject parentPlayer;
 	
@@ -11,6 +12,7 @@ public class Monster : MonoBehaviour {
 	{
 		//movementSpeed = 0.1f;
 		parentPlayer = GameObject.Find("Player");
+		monsterStep.loop = true;
 	}
 	
 	// Update is called once per frame
@@ -23,6 +25,18 @@ public class Monster : MonoBehaviour {
 		float distance = Vector3.Distance( playerPos, monsterPos);
 		Vector3 movementDir = Vector3.Normalize(playerPos - monsterPos);
 		transform.position = monsterPos + movementDir * movementSpeed * Time.deltaTime ;
+	
+		if(distance < 100.0f)
+		{
+			if(!monsterStep.isPlaying)
+				monsterStep.Play();
+				
+			monsterStep.volume = (1 - distance/100);
+			monsterStep.pitch  = (1 - distance / 100) * 2.5f;
+			
+		}
 		
 	}
+	
+	
 }
