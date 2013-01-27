@@ -20,8 +20,8 @@ public class Monster : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 playerPos = parentPlayer.transform.position;
-		playerPos = new Vector3(playerPos.x,  0, playerPos.z);
-		Vector3 monsterPos = transform.position;
+		playerPos = new Vector3(playerPos.x,  3, playerPos.z);
+		Vector3 monsterPos = new Vector3(transform.position.x, 3, transform.position.z);
 		
 		float distance = Vector3.Distance( playerPos, monsterPos);
 		Vector3 movementDir = Vector3.Normalize(playerPos - monsterPos);
