@@ -4,6 +4,7 @@ using System.Collections;
 public class Monster : MonoBehaviour {
 
 	public AudioSource monsterStep;
+	public AudioSource monsterMusic;
 	public float movementSpeed = 0.1f;
 	GameObject parentPlayer;
 	
@@ -19,7 +20,7 @@ public class Monster : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 playerPos = parentPlayer.transform.position;
-		playerPos = new Vector3(playerPos.x, 0, playerPos.z);
+		playerPos = new Vector3(playerPos.x,  0, playerPos.z);
 		Vector3 monsterPos = transform.position;
 		
 		float distance = Vector3.Distance( playerPos, monsterPos);
@@ -28,6 +29,11 @@ public class Monster : MonoBehaviour {
 	
 		if(distance < 100.0f)
 		{
+			if(!monsterMusic.isPlaying)
+				monsterMusic.Play();
+				
+			monsterMusic.volume = (1 - distance/100);
+			
 			if(!monsterStep.isPlaying)
 				monsterStep.Play();
 				
