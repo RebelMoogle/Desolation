@@ -27,22 +27,31 @@ public class Monster : MonoBehaviour {
 		Vector3 movementDir = Vector3.Normalize(playerPos - monsterPos);
 		transform.position = monsterPos + movementDir * movementSpeed * Time.deltaTime ;
 	
-		if(distance < 100.0f)
+		//music
+		if(distance < 10.0f)
 		{
 			if(!monsterMusic.isPlaying)
 				monsterMusic.Play();
-				
-			monsterMusic.volume = (1 - distance/100);
+			
+			//monsterMusic.volume = (1 - distance/50);
+		}
+		else
+			monsterMusic.Stop();
+		
+		if(distance < 30.0f)
+		{
 			
 			if(!monsterStep.isPlaying)
 				monsterStep.Play();
 				
-			monsterStep.volume = (1 - distance/100);
-			monsterStep.pitch  = (1 - distance / 100) * 2.5f;
+			monsterStep.volume = (1 - distance / 30);
+			monsterStep.pitch  = (1 - distance / 30) * 2.5f;
 			
 			//this is just a comment
 			
 		}
+		else
+			monsterStep.Stop();
 		
 	}
 	
