@@ -7,14 +7,18 @@ public class PlayerSounds : MonoBehaviour {
 	public AudioSource playerHeart;
 	GameObject parentMonster;
 	Vector3 oldPlayerPos;
+	float distanceTraveled;
+	
+	public float stepdistance = 5.0f; //C# doesn't have macros :( SADPANDA
 	
 	// Use this for initialization
 	void Start () 
 	{
 		//movementSpeed = 0.1f;
 		parentMonster = GameObject.Find("Monster");
-		playerStep.loop = true;
+		playerStep.loop = false;
 		oldPlayerPos = new Vector3(0,0,0);
+		distanceTraveled = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -37,16 +41,18 @@ public class PlayerSounds : MonoBehaviour {
 		else 
 			playerHeart.Stop();
 		
-		if(!playerStep.isPlaying && Vector3.Distance(playerPos, oldPlayerPos) > 0)
+		distanceTraveled += Vector3.Distance(playerPos, oldPlayerPos);
+		
+		if(distanceTraveled >= stepdistance)
 		{
 			playerStep.Play();
+			distanceTraveled = 0.0f;
 		}
 		else if(playerStep.isPlaying && Mathf.Abs(playerPos.y - oldPlayerPos.y) > 0.01f)
 		{
 			playerStep.Stop();
+			distanceTraveled = 0.0f;
 		}
-		else
-			playerStep.Stop();
 		
 		oldPlayerPos = playerPos;
 	}
