@@ -4,9 +4,9 @@ using System.Collections;
 public class Monster : MonoBehaviour {
 
 	public AudioSource monsterStep;
-	public float stepDistance;
-	public float maxStepPitch;
-	public float musicDistance;
+	public float stepDistance = 30.0f;
+	public float maxStepPitch= 2.5f;
+	public float musicDistance = 15.0f;
 	public AudioSource monsterMusic;
 	public float movementSpeed = 0.1f;
 	GameObject parentPlayer;
@@ -17,10 +17,6 @@ public class Monster : MonoBehaviour {
 		//movementSpeed = 0.1f;
 		parentPlayer = GameObject.Find("Player");
 		monsterStep.loop = true;
-		
-		stepDistance = 30.0f;
-		maxStepPitch = 2.5f;
-		musicDistance = 10.0f;
 	}
 	
 	// Update is called once per frame

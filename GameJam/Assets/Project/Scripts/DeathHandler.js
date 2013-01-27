@@ -4,6 +4,7 @@
 public var fallingRockPrefab : GameObject;
 public var rockNumber : int;
 public var randomOffsetDistance : float;
+public var deathDistance : float;
 
 private var playerIsAlive : boolean = true;
 
@@ -32,7 +33,7 @@ function Update ()
 {
 	monsterDistance = Vector3.Distance( transform.position, MonsterObject.transform.position);
 
-	if( monsterDistance < 3.25 && playerIsAlive )
+	if( monsterDistance < deathDistance && playerIsAlive )
 	{
 		KillPlayer();
 	}
