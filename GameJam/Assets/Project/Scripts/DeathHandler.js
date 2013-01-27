@@ -1,18 +1,20 @@
 #pragma strict
 
-public var MonsterObject : GameObject;
+
 public var fallingRockPrefab : GameObject;
 public var rockNumber : int;
 public var randomOffsetDistance : float;
 
 
 private var monsterDistance : float;
-
+private var MonsterObject : GameObject;
 //=========================
 
 function Start () 
 {
 
+	//by charlie to find monster object at start automatically
+	MonsterObject = GameObject.Find("Monster");
 	//KillPlayer();
 }
 
