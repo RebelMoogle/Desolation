@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: 0092d7ac3d593144db8d75a76ce76cd7
+guid: 462c7e4a965681f4ba91d9f5e800bb2a
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: walls
-    100004: water
+    100002: corridor_open:walls
     400000: //RootNode
-    400002: walls
-    400004: water
-    2300000: walls
-    2300002: water
-    3300000: walls
-    3300002: water
-    4300000: walls
-    4300002: water
+    400002: corridor_open:walls
+    2300000: corridor_open:walls
+    3300000: corridor_open:walls
+    4300000: corridor_open:walls
     9500000: //RootNode
   materials:
     importMaterials: 1
