@@ -5,9 +5,15 @@ public var fallingRockPrefab : GameObject;
 public var rockNumber : int;
 public var randomOffsetDistance : float;
 
+private var playerIsAlive : boolean = true;
 
 private var monsterDistance : float;
 private var MonsterObject : GameObject;
+
+private var mouseLookX : MouseLook;
+private var mouseLookY : MouseLook;
+private var playerControl : CharacterMotor;
+
 //=========================
 
 function Start () 
@@ -16,15 +22,17 @@ function Start ()
 	//by charlie to find monster object at start automatically
 	MonsterObject = GameObject.Find("Monster");
 	//KillPlayer();
+	
+	playerControl = GetComponent( CharacterMotor );
+	mouseLookX = GameObject.Find("Main Camera").GetComponent( MouseLook );
+	mouseLookY = GetComponentInChildren( MouseLook );
 }
 
 function Update () 
 {
 	monsterDistance = Vector3.Distance( transform.position, MonsterObject.transform.position);
-	
-	
-	
-	if( monsterDistance < 1.0 )
+
+	if( monsterDistance < 3.25 && playerIsAlive )
 	{
 		KillPlayer();
 	}
@@ -35,9 +43,13 @@ function Update ()
 
 function KillPlayer ()
 {
+	playerIsAlive = false;
+	playerControl.canControl = false;
 	
-	Destroy( gameObject.GetComponent("FPSInputController") );
-	Destroy( gameObject.GetComponent("MouseLook") );
+	mouseLookX.sensitivityX = 0;
+	mouseLookX.sensitivityY = 0;
+	mouseLookY.sensitivityX = 0;
+	mouseLookY.sensitivityY = 0;
 	
 	for ( var i : int = 0; i < rockNumber; i++ )
 	{
