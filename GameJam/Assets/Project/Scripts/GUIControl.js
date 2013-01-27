@@ -1,5 +1,7 @@
 #pragma strict
 
+public var mainScene : String;
+
 private var hit : RaycastHit;
 private var ray : Ray;
  
@@ -13,8 +15,12 @@ function FixedUpdate () {
         	
         	if( hit.transform.name == "gui_button_start" )
         	{
-        		Debug.Log("Started Game!");
-        		Application.LoadLevel("levelOne");
+        		//Debug.Log("Started Game!");
+        		Application.LoadLevel(mainScene);
+        	}
+        	else if( hit.transform.name == "gui_button_exit" )
+        	{
+        		Application.Quit();
         	}
 
         }
