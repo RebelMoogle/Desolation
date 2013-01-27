@@ -5,6 +5,7 @@ public class PlayerSounds : MonoBehaviour {
 
 	public AudioSource playerStep;
 	public AudioSource playerHeart;
+	public float startHeartDistance;
 	GameObject parentMonster;
 	Vector3 oldPlayerPos;
 	float distanceTraveled;
@@ -19,6 +20,7 @@ public class PlayerSounds : MonoBehaviour {
 		playerStep.loop = false;
 		oldPlayerPos = new Vector3(0,0,0);
 		distanceTraveled = 0.0f;
+		startHeartDistance = 100.0f;
 	}
 	
 	// Update is called once per frame
@@ -30,12 +32,12 @@ public class PlayerSounds : MonoBehaviour {
 		
 		float distance = Vector3.Distance( monsterPos, playerPos);
 	
-		if(distance < 100.0f)
+		if(distance < startHeartDistance)
 		{
 			if(!playerHeart.isPlaying)
 				playerHeart.Play();
 				
-			playerHeart.volume = (1 - distance/100);	
+			playerHeart.volume = (1 - distance/startHeartDistance);	
 			//this is just a comment
 		}
 		else 
