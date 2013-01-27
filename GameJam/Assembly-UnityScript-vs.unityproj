@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Project\Scripts\DeathHandler.js" />
+     <Compile Include="Assets\Project\Scripts\GUIControl.js" />
      <Compile Include="Assets\Project\Scripts\PlayerFootstep.js" />
      <Compile Include="Assets\Project\Scripts\SoundTransition.js" />
  <Reference Include="Assembly-UnityScript-firstpass">
