@@ -17,11 +17,12 @@ public class Monster : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 playerPos = parentPlayer.transform.position;
-		playerPos = new Vector3(playerPos.x, 0, playerPos.z);
+		//playerPos = new Vector3(playerPos.x, 0, playerPos.z);
 		Vector3 monsterPos = transform.position;
 		
 		float distance = Vector3.Distance( playerPos, monsterPos);
 		Vector3 movementDir = Vector3.Normalize(playerPos - monsterPos);
+		movementDir = new Vector3(movementDir.x, 0, movementDir.z);
 		transform.position = monsterPos + movementDir * movementSpeed * Time.deltaTime ;
 		
 	}
