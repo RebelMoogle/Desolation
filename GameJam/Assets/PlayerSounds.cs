@@ -34,12 +34,18 @@ public class PlayerSounds : MonoBehaviour {
 			playerHeart.volume = (1 - distance/100);	
 			//this is just a comment
 		}
+		else 
+			playerHeart.Stop();
 		
 		if(!playerStep.isPlaying && Vector3.Distance(playerPos, oldPlayerPos) > 0)
 		{
 			playerStep.Play();
 		}
 		else if(playerStep.isPlaying && Mathf.Abs(playerPos.y - oldPlayerPos.y) > 0.01f)
+		{
+			playerStep.Stop();
+		}
+		else
 			playerStep.Stop();
 		
 		oldPlayerPos = playerPos;
