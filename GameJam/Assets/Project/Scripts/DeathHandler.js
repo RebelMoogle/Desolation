@@ -1,19 +1,31 @@
 #pragma strict
 
+public var MonsterObject : GameObject;
 public var fallingRockPrefab : GameObject;
 public var rockNumber : int;
 public var randomOffsetDistance : float;
+
+
+private var monsterDistance : float;
 
 //=========================
 
 function Start () 
 {
 
-	KillPlayer();
+	//KillPlayer();
 }
 
 function Update () 
 {
+	monsterDistance = Vector3.Distance( transform.position, MonsterObject.transform.position);
+	
+	
+	
+	if( monsterDistance < 1.0 )
+	{
+		KillPlayer();
+	}
 
 }
 
