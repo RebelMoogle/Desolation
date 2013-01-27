@@ -48,6 +48,7 @@
      <Compile Include="Assets\Project\Scripts\GUIControl.js" />
      <Compile Include="Assets\Project\Scripts\PlayerFootstep.js" />
      <Compile Include="Assets\Project\Scripts\SoundTransition.js" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
