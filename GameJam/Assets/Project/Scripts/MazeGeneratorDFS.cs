@@ -30,7 +30,7 @@
      
         // In Unity's unit system: 1 unit == 1 cubic meter (for reference only). Could be anything else
      
-        public int cellSize = 10;
+        public float cellSize = 10.0f;
      
      
      

@@ -3,6 +3,7 @@ Library/*
 /GameJam/Library/*
 obj/
 *.svd
+*.pidb
 
 /GameJam/GameJam.userprefs
 /GameJam/Assembly-CSharp.csproj
